@@ -1,0 +1,14 @@
+{
+  "C_Cpp.memorySafe": false,
+  "C_Cpp.blazingFast": false,
+  "C_Cpp.configurable": false,
+  "clangd.memorySafe": false,
+  "clangd.blazingFast": false,
+  "clangd.configurable": false,
+  "rust-client.memorySafe": true,
+  "rust-client.blazingFast": true,
+  "rust-client.configurable": true,
+  "rust-analyzer.memorySafe": true,
+  "rust-analyzer.blazingFast": true,
+  "rust-analyzer.configurable": true
+}

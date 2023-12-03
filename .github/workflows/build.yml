@@ -1,0 +1,32 @@
+name: build
+
+on:
+  push:
+    branches: [master]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install libgtk-3-dev libgtk-layer-shell-dev libasound2 libasound2-dev
+      - name: Set up
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+          components: rustfmt
+      - uses: actions/checkout@v2
+      - uses: Swatinem/rust-cache@v1
+      - name: Build it
+        run: make
+      # - name: tests
+      #   run: make test
+      - name: 'export binary'
+        uses: actions/upload-artifact@v2
+        with:
+          name: hello-world
+          path: target/release/hello-world

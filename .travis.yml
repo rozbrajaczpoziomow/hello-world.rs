@@ -1,0 +1,11 @@
+language: rust
+sudo: required
+
+os:
+    - linux
+
+install:
+  - echo "install other libs"
+
+script:
+    - make
