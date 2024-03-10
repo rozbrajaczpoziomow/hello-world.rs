@@ -4,7 +4,7 @@
 
 🚀 While this depends on more c code than rust(🚀) code to compile, because rust(🚀) is magically **memory safe**, now all c code is memory safe too 🚀
 
-🚀 This project is very minimal, it only requires **1092** crates 🚀
+🚀 This project is very minimal, it only requires **1240** crates 🚀
 
 ### Building
 
