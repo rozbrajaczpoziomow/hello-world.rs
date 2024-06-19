@@ -1,13 +1,13 @@
 include config.mk
 
 all:
-	@echo "It takes just a afternoon to build this LLVM optimised🚀, memory safe🚀, robust🚀, minimal🚀 and configurable🚀 project, please wait for the awesomeness 🚀"
-	@sleep 5
+	@echo enjoy the ride
 	@cargo build --release
+	@cp -r translations ./target/release/
 
 clean: ./target
 	@rm -rf -- target
- 
+
 install: ./target/release/hello-world
 	@install -Dm755 -- ./target/release/hello-world $(DESTDIR)$(PREFIX)/bin/hello-world
 
